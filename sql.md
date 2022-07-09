@@ -1,4 +1,4 @@
-# SQL tips
+# SQL Snippets
 
 Split a string and get it's first parts as one column and last part as another.
 
