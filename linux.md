@@ -27,7 +27,7 @@ cat /var/run/reboot-required
 ## Concise docker ps
 
 Put into your .bashrc
-`alias ctop='docker ps --format "table {{.Names}}\t{{.Status}}" | (read -r; printf "%s\n" "$REPLY"; sort -k 1 )'`
+`alias ctop='docker ps -a --format "table {{.Names}}\t{{.Status}}" | (read -r; printf "%s\n" "$REPLY"; sort -k 1 )'`
 
 ## Docker compose
 
