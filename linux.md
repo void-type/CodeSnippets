@@ -27,10 +27,10 @@ cat /var/run/reboot-required
 ## Concise docker ps
 
 Put into your .bashrc
-`alias ctop='docker ps --format "table {{.Names}}\t{{.Status}}"'`
+`alias ctop='docker ps --format "table {{.Names}}\t{{.Status}}" | (read -r; printf "%s\n" "$REPLY"; sort -k 1 )'`
 
 ## Docker compose
 
 Stop `docker compose down`
 Start or apply changes `docker compose up -d`
-Update image `docker compose pull; docker compose up -d`
+Update image `docker compose pull && docker compose up -d`
