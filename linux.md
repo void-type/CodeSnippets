@@ -34,3 +34,5 @@ Put into your .bashrc
 Stop `docker compose down`
 Start or apply changes `docker compose up -d`
 Update image `docker compose pull && docker compose up -d`
+Start a terminal `docker compose exec -it <service> /bin/sh`
+Start a terminal and override entry point `docker compose run -it --entrypoint /bin/sh <service>`
